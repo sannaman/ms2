@@ -19,7 +19,7 @@ node{
         withCredentials([string(credentialsId: 'DOKCER_HUB_PASSWORD', variable: 'DOKCER_HUB_PASSWORD')]) {
           sh "docker login -u sannaman -p ${DOKCER_HUB_PASSWORD}"
         }
-        sh 'docker push sannaman/ms3:${BUILD_NUMBER}'
+        sh 'docker push sannaman/ms2:${BUILD_NUMBER}'
      }
      stage("Deploy To Kuberates Cluster"){
         sh 'kubectl apply -f k8s/ms2-deployment.yaml'
