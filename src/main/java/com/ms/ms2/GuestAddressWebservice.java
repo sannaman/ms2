@@ -12,7 +12,7 @@ public class GuestAddressWebservice {
 	@GetMapping("/guest/address/{id}")
 	public GuestAddressDTO getGuestAddress(@PathVariable("id") String id) {
 		
-		GuestAddressDTO dto = new GuestAddressDTO(id+" City", id+" State", id+" Country");
+		GuestAddressDTO dto = new GuestAddressDTO(id+" City Modified", id+" State", id+" Country");
 		return dto;
 	}
 
